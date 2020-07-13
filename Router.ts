@@ -109,7 +109,7 @@ ______           _         _
       }
 
       // Call routing function on OakRouter superclass
-      this[route.requestMethod](
+      (this[route.requestMethod] as Function)(
         this.normalizedPath(meta.prefix as string, route.path),
         controllerCb,
       );
